@@ -1,11 +1,10 @@
 import React from 'react'
-import './header.css'
+import './home.css'
 import CTA from './CTA'
 import Foto from '../../assets/img/foto-chein.png'
-import HeaderSocials from './HeaderSocials'
 import Logo from '../../assets/img/navbar-logo.png'
 
-const Header = () => {
+const Home = () => {
     return (
         <header id='home'>
             <div className="container header__container">
@@ -25,4 +24,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default Home

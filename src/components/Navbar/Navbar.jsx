@@ -15,14 +15,14 @@ const Navbar = () => {
   return (
     <nav>
       <a><BiMenu /></a>
-      <a href='#home'><img src={Logo} alt='logo'/></a>
-      <a href='#sobremi'><MdOutlinePersonOutline /></a>
-      <a href='#experiencia'><MdOutlineWorkHistory /></a>
-      <a href='#estudios'><MdOutlineAssuredWorkload /></a>
-      <a href='#skills'><AiOutlineStar/></a>
-      <a href='#portfolio'><GoBook /></a>
-      <a href='#servicios'><AiOutlineShoppingCart /></a>
-      <a href='#contacto'><AiOutlineMail /></a>
+      <a href='/'><img src={Logo} alt='logo'/></a>
+      <a href='/sobremi'><MdOutlinePersonOutline /></a>
+      <a href='/experiencia'><MdOutlineWorkHistory /></a>
+      <a href='/estudios'><MdOutlineAssuredWorkload /></a>
+      <a href='/skills'><AiOutlineStar/></a>
+      <a href='/portfolio'><GoBook /></a>
+      <a href='/servicios'><AiOutlineShoppingCart /></a>
+      <a href='/contacto'><AiOutlineMail /></a>
     </nav>
   )
 }
