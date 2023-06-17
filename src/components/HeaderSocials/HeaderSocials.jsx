@@ -1,4 +1,4 @@
-
+import { BrowserRouter, Link } from 'react-router-dom'
 import React from 'react'
 import './headersocials.css'
 import {AiOutlineInstagram} from 'react-icons/ai'
@@ -10,13 +10,18 @@ import {AiOutlineGithub} from 'react-icons/ai'
 
 const HeaderSocials = () => {
     return (
-        <div className='header__socials'>
-            <a className='iconos__rrss' href='https://linkedin.com' target='_blank'><AiOutlineLinkedin/></a>
-            <a className='iconos__rrss' href='https://behance.net' target='_blank'><AiOutlineBehance/></a>
-            <a className='iconos__rrss' href='https://github.com' target='_blank'><AiOutlineGithub/></a>
-            <a className='iconos__rrss' href='https://youtube.com' target='_blank'><AiOutlineYoutube/></a>
-            <a className='iconos__rrss' href='https://instagram' target='_blank'><AiOutlineInstagram/></a>
-        </div>
+        <>
+            <BrowserRouter>
+                <div className='header__socials'>
+                        <Link className='iconos__rrss' to='https://www.linkedin.com/in/ignaciopeniadg/'><AiOutlineLinkedin/></Link>
+                        <Link className='iconos__rrss' to='https://www.behance.net/ignaciopeniadg'><AiOutlineBehance/></Link>
+                        <Link className='iconos__rrss' to='https://github.com/ignaciopeniadg'><AiOutlineGithub/></Link>
+                        <Link className='iconos__rrss' to='https://www.youtube.com/@cheindesign'><AiOutlineYoutube/></Link>
+                        <Link className='iconos__rrss' to='https://www.instagram.com/cheindesign/'><AiOutlineInstagram/></Link>
+                </div>
+            </BrowserRouter>
+        </>
+
     )
 }
 

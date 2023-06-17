@@ -16,8 +16,8 @@ import { Form } from 'react-router-dom'
 const App = () => {
     return (
         <>
-        <Navbar/>
         <BrowserRouter>
+            <Navbar/>
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/sobremi' element={<SobreMi />} />

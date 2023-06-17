@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import './navbar.css'
 import Logo from '../../assets/img/navbar-logo.png'
 import {BiMenu} from 'react-icons/bi'
@@ -14,15 +15,17 @@ import {AiOutlineMail} from 'react-icons/ai'
 const Navbar = () => {
   return (
     <nav>
-      <a><BiMenu /></a>
-      <a href='/'><img src={Logo} alt='logo'/></a>
-      <a href='/sobremi'><MdOutlinePersonOutline /></a>
-      <a href='/experiencia'><MdOutlineWorkHistory /></a>
-      <a href='/estudios'><MdOutlineAssuredWorkload /></a>
-      <a href='/skills'><AiOutlineStar/></a>
-      <a href='/portfolio'><GoBook /></a>
-      <a href='/servicios'><AiOutlineShoppingCart /></a>
-      <a href='/contacto'><AiOutlineMail /></a>
+      <ul>
+        <li><button><BiMenu className='boton-menu' /></button></li>
+        <li><NavLink to='/'><img className='logo' src={Logo} alt='logo'/></NavLink></li>
+        <li><NavLink to='/sobremi'><MdOutlinePersonOutline /></NavLink></li>
+        <li><NavLink to='/experiencia'><MdOutlineWorkHistory /></NavLink></li>
+        <li><NavLink to='/estudios'><MdOutlineAssuredWorkload /></NavLink></li>
+        <li><NavLink to='/skills'><AiOutlineStar/></NavLink></li>
+        <li><NavLink to='/portfolio'><GoBook /></NavLink></li>
+        <li><NavLink to='/servicios'><AiOutlineShoppingCart /></NavLink></li>
+        <li><NavLink to='/contacto'><AiOutlineMail /></NavLink></li>
+      </ul>
     </nav>
   )
 }
