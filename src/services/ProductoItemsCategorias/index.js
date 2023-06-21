@@ -1,14 +1,14 @@
-import { categorias } from '../../tmp/StockDeServicios'
+import { categorias } from '../../tmp/data'
 
 
-const getCategories = async () => {
+const getCategorias = async () => {
 
     return new Promise ((resolve, reject) => {
         resolve(categorias);
     });
 };
 
-const getCategory = async (id) => {
+const getCategoria = async (id) => {
     return new Promise ((resolve, reject) => {
         resolve(categorias.find((categorias) => categorias.id == id));
     });
@@ -21,4 +21,4 @@ const deleteItem = async () => {}
 
 const createItem = async () => {} */
 
-export { getCategories, getCategory };
+export { getCategorias, getCategoria };

@@ -14,7 +14,7 @@ import {AiOutlineMail} from 'react-icons/ai'
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className='nav__principal'>
       <ul>
         <li><button><BiMenu className='boton-menu' /></button></li>
         <li><NavLink to='/'><img className='logo' src={Logo} alt='logo'/></NavLink></li>

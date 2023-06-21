@@ -1,17 +1,20 @@
+// import { useNavigate } from "react-router-dom"
+import { ItemServicio } from "../ItemServicio/ItemServicio";
 
 
-const ItemList = ({ stockDeServicios }) => {
+const ItemList = ({ Servicios }) => {
 
-    return (
-        stockDeServicios.map((stockDeServicios) => (
-            <div className='card__servicio' key={stockDeServicios.nombre}>
-                <h2 className='card__servicio-nombre'>{stockDeServicios.nombre}</h2>
-                <p className='card__servicio-descripcion'>{stockDeServicios.descripcion}</p>
-                <h4 className='card__servicio-descripcion'>{stockDeServicios.precio} USD</h4>
-                <button className='btn' onClick={() => navigate(`/detalle/${stockDeServicios.id}`)} >Ver Detalle</button>
-            </div>
-    )))
+    return Servicios.map((ItemServicio) => (
+            <ItemServicio
+            id={ItemServicio.id}
+            nombre={ItemServicio.nombre}
+            categoria={ItemServicio.categoria}
+            descripcion={ItemServicio.descripcion}
+            precio={ItemServicio.precio}
+            />
+    ));
+};
 
-}
+export { ItemList };
 
-export { ItemList }
+/*                <button className='btn' onClick={() => navigate(`/detalle/${stockDeServicios.id}`)} >Ver Detalle</button> */
