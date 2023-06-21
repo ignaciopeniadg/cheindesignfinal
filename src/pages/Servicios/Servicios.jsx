@@ -2,7 +2,7 @@ import React from 'react'
 import './servicios.css'
 
 import Carrito from './Carrito/Carrito'
-import ItemListContainer from '../../components/ItemListContainer/ItemListContainer'
+import { ItemListContainer } from '../../common/ItemListContainer/ItemListContainer'
 
 const Servicios = () => {
   return (
@@ -17,4 +17,4 @@ const Servicios = () => {
   )
 }
 
-export default Servicios
+export { Servicios }

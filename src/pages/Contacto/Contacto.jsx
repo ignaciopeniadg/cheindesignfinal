@@ -7,4 +7,4 @@ function Contacto() {
   )
 }
 
-export default Contacto
+export { Contacto }

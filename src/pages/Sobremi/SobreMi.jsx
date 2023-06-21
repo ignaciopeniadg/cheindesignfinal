@@ -48,4 +48,4 @@ function SobreMi() {
   )
 }
 
-export default SobreMi
+export { SobreMi }

@@ -4,15 +4,24 @@ import { ItemServicio } from "../ItemServicio/ItemServicio";
 
 const ItemList = ({ Servicios }) => {
 
-    return Servicios.map((ItemServicio) => (
-            <ItemServicio
-            id={ItemServicio.id}
-            nombre={ItemServicio.nombre}
-            categoria={ItemServicio.categoria}
-            descripcion={ItemServicio.descripcion}
-            precio={ItemServicio.precio}
-            />
-    ));
+    return (
+        <div>
+            {
+                Servicios.map((ItemServicio) => (
+                    <ItemServicio
+                        id={ItemServicio.id}
+                        nombre={ItemServicio.nombre}
+                        categoria={ItemServicio.categoria}
+                        descripcion={ItemServicio.descripcion}
+                        precio={ItemServicio.precio}
+                        onItemClicked={ItemServicio.onItemClicked}
+                        textButton={ItemServicio.textButton}
+                    />
+                ))
+            };
+        </div>
+    );
+
 };
 
 export { ItemList };

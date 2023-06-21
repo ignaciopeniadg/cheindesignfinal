@@ -1,12 +1,14 @@
 import './itemListContainer.css'
-import { NavLink, useParams} from 'react-router-dom'
+import { NavLink, useParams, useNavigate} from 'react-router-dom'
 import { useEffect, useState,} from 'react'
 import { getItems, getCategorias } from "../../services"
-import { ItemList } from '../../common/ItemList/itemList'
+import { ItemList } from "../../common/ItemList/itemList"
+import { ItemServicio } from "../../common/ItemServicio/ItemServicio"
 /* import { getCategory, getCategories } from "./ProductoItemsCategorias" */
 
 const ItemListContainer = () => {
     const { catId } = useParams();
+    const navigate = useNavigate();
 
     const [Servicios, setItems] = useState ([]);
     const [categorias, setCategorias] = useState ([]);
@@ -35,11 +37,19 @@ const ItemListContainer = () => {
                         ))}
                     </ul>
                 </nav>
-                <ItemList Servicios={Servicios} />
+                <ItemList Servicios={Servicios.map(itemServicio => (
+                    {
+                        ...itemServicio,
+                        onItemClicked: () => navigate(`/item-detail/${itemServicio.id}`),
+                        textButton: "Ver detalle"
+                    }
+                )
+                
+                )} />
             </container>
 
         </>
     )
 }
 
-export default ItemListContainer
+export { ItemListContainer } 

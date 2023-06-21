@@ -25,4 +25,4 @@ const HeaderSocials = () => {
     )
 }
 
-export default HeaderSocials
+export { HeaderSocials }

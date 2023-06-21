@@ -11,4 +11,4 @@ const ItemServicio = ({ id, nombre, categoria, descripcion, precio }) => {
     )
 }
 
-export default ItemServicio
+export { ItemServicio };

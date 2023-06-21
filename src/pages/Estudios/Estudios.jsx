@@ -7,4 +7,4 @@ function Estudios() {
   )
 }
 
-export default Estudios
+export { Estudios }

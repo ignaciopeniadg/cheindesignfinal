@@ -7,4 +7,4 @@ function Experiencia() {
   )
 }
 
-export default Experiencia
+export { Experiencia }
