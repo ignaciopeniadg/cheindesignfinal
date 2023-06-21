@@ -1,15 +1,13 @@
 import './itemListContainer.css'
-import ItemContador, { ItemContador } from '../ItemContador/ItemContador'
+import { useParams } from 'react-router-dom'
 import React from 'react'
 
-export const ItemListContainer = ({ texto }) => {
-    const onAdd = (quantity) => {
-        console.log('compraste ${quantity} unidades')
-    }
+const ItemListContainer = () => {
+    const { id } = useParams();
 
     return (
         <>
-            <ItemContador initial={1} />
+            <div>Item List Container : {id}</div>
 
         </>
     )

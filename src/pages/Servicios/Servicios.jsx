@@ -1,16 +1,15 @@
 import React from 'react'
 import './servicios.css'
-import ServiciosCategorias from './ServiciosCategorias/ServiciosCategorias'
-import ServiciosTemplate from './ServiciosTemplate/ServiciosTemplate'
+
 import Carrito from './Carrito/Carrito'
+import ItemListContainer from '../../components/ItemListContainer/ItemListContainer'
 
 const Servicios = () => {
   return (
     <section id='servicios'>
       <Carrito />
-      <div className='container servicios__divicion'>
-        <ServiciosCategorias />
-        <ServiciosTemplate />
+      <div>
+        <ItemListContainer />
       </div>
       
     </section>

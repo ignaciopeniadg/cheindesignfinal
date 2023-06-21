@@ -11,6 +11,7 @@ import Servicios from './pages/Servicios/Servicios'
 import Contacto from './pages/Contacto/Contacto'
 import HeaderSocials from './components/HeaderSocials/HeaderSocials'
 import { Form } from 'react-router-dom'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 
 const App = () => {
@@ -26,6 +27,8 @@ const App = () => {
                 <Route path='/skills' element={<Skills />} />
                 <Route path='/portfolio' element={<Portfolio />} />
                 <Route path='/servicios' element={<Servicios />} />
+                <Route path='/itemlistcontainer' element={<ItemListContainer />} />
+                <Route path='/category/:id' element={<ItemListContainer />} />
                 <Route path='/contacto' element={<Contacto />} />
             </Routes>
         </BrowserRouter>

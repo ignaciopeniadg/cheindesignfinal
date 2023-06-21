@@ -229,3 +229,5 @@ const StockDeServicios =
                     image:{Blanco},
                 },
             ]
+
+export default StockDeServicios
