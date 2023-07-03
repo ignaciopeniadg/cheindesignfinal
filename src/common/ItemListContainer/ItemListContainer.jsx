@@ -37,7 +37,7 @@ const ItemListContainer = () => {
                         ))}
                     </ul>
                 </nav>
-                <ItemList Servicios={Servicios.map(itemServicio => (
+                <ItemList  Servicios={Servicios.map(itemServicio => (
                     {
                         ...itemServicio,
                         onItemClicked: () => navigate(`/item-detail/${itemServicio.id}`),

@@ -1,0 +1,68 @@
+
+#experiencia {
+    height: 100vh;
+}
+.experiencia__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.experiencia__container > div {
+    background-color: var(--color-bg-variant);
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.experiencia__container > div:hover {
+    background: transparent;
+    border-color: var(--color-bg-primary);
+    cursor: default;
+}
+
+.experiencia__contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+
+.experiencia__nombre {
+    display: flex;
+    flex-direction: Column;
+    justify-content: center;
+}
+
+#experiencia__nombre-puesto {
+    padding: 0.5rem;
+    border-radius: 2rem;
+    background-color: var(--color-bg);
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+
+#experiencia__nombre-empresa {
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+#experiencia__nombre-fecha {
+    font-size: 1.5;
+    font-weight: 200;
+}
+
+.experiencia__programas {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.iconos__experiencia {
+    font-size: 2rem;
+}
