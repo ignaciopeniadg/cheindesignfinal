@@ -5,12 +5,13 @@
 .experiencia__container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 12rem;
     gap: 2rem;
 }
 
 .experiencia__container > div {
     background-color: var(--color-bg-variant);
-    border-radius: 2rem;
+    border-radius: 0 0 2rem 2rem;
     border: 1px solid transparent;
     transition: var(--transition);
 }
@@ -22,11 +23,16 @@
 }
 
 .experiencia__contenido {
+    height: fit-content;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: top;
     padding-bottom: 3rem;
     text-align: center;
+}
+
+.experiencia__contenido:hover {
+    transform: translateY(-1rem);
 }
 .experiencia__nombre {
     display: flex;
@@ -35,8 +41,8 @@
 }
 
 #experiencia__nombre-puesto {
-    padding: 0.5rem;
-    border-radius: 2rem;
+    padding: 2rem 0.5rem;
+    border-radius: 0 0 2rem 2rem;
     background-color: var(--color-bg);
     font-size: 2rem;
     font-weight: 300;
@@ -44,6 +50,7 @@
 
 
 #experiencia__nombre-empresa {
+    margin-top: 1rem;
     font-size: 1.8rem;
     color: var(--color-primary-variant);
     font-weight: 500;
@@ -57,11 +64,16 @@
 }
 
 .experiencia__programas {
-    margin-top: 2rem;
+    margin-top: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 2rem;
+}
+.experiencia__descripcion {
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin: 2rem 5rem;
 }
 
 .iconos__experiencia {
