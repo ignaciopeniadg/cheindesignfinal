@@ -49,6 +49,7 @@
 }
 
 .sobremi__card:hover {
+    transform: translateY(-1rem);
     background: transparent;
     border-color: var(--color-bg-primary);
     cursor: default;
