@@ -10,7 +10,7 @@ const getCategorias = async () => {
 
 const getCategoria = async (id) => {
     return new Promise ((resolve, reject) => {
-        resolve(categorias.find((categorias) => categorias.id == id));
+        resolve(categorias.find((categoria) => categoria.id === id));
     });
 }
 
@@ -18,7 +18,7 @@ const getCategoria = async (id) => {
 /* const updateItem = async () => {}
 
 const deleteItem = async () => {}
-
+vos 
 const createItem = async () => {} */
 
 export { getCategorias, getCategoria };

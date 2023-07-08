@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className='nav__principal'>
       <div className='burger'><BurgerButton /></div>
-      <ul>
+      <ul className='links'>
         <li><NavLink to='/'><img className='logo' src={Logo} alt='logo' /></NavLink></li>
         <li><NavLink to='/sobremi'><MdOutlinePersonOutline /></NavLink></li>
         <li><NavLink to='/experiencia'><MdOutlineWorkHistory /></NavLink></li>

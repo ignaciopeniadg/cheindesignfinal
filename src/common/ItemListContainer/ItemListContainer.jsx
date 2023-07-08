@@ -1,25 +1,25 @@
 import './itemListContainer.css'
-import { NavLink, useParams, useNavigate} from 'react-router-dom'
-import { useEffect, useState,} from 'react'
+import { NavLink, useParams, useNavigate } from 'react-router-dom'
+import { useEffect, useState, } from 'react'
 import { getItems, getCategorias } from "../../services"
 import { ItemList } from "../../common/ItemList/itemList"
 import { ItemServicio } from "../../common/ItemServicio/ItemServicio"
 /* import { getCategory, getCategories } from "./ProductoItemsCategorias" */
 
 const ItemListContainer = () => {
-    const { catId } = useParams();
+    const { id } = useParams();
     const navigate = useNavigate();
 
-    const [Servicios, setItems] = useState ([]);
-    const [categorias, setCategorias] = useState ([]);
+    const [Servicios, setItems] = useState([]);
+    const [categorias, setCategorias] = useState([]);
 
-    useEffect (() => {
-        getItems(catId).then((data) => {
+    useEffect(() => {
+        getItems(id).then((data) => {
             setItems(data);
         });
-    }, [catId]);
+    }, [id]);
 
-    useEffect (() => {
+    useEffect(() => {
         getCategorias().then((data) => {
             setCategorias(data);
         });
@@ -32,20 +32,22 @@ const ItemListContainer = () => {
                     <ul>
                         {categorias.map((categoria) => (
                             <li>
-                                <NavLink className="nav__categorias-link" to ={`/categoria/${categoria.id}`}>{categoria.name}</NavLink>
+                                <NavLink className="nav__categorias-link" to={`/categoria/${categoria.id}`}>{categoria.name}</NavLink>
                             </li>
                         ))}
                     </ul>
                 </nav>
-                <ItemList  Servicios={Servicios.map(itemServicio => (
-                    {
-                        ...itemServicio,
-                        onItemClicked: () => navigate(`/item-detail/${itemServicio.id}`),
-                        textButton: "Ver detalle"
-                    }
-                )
-                
-                )} />
+                <div className='itemlist'>
+                    <ItemList Servicios={Servicios.map(itemServicio => (
+                        {
+                            ...itemServicio,
+                            onItemClicked: () => navigate(`/item-detail/${itemServicio.id}`),
+                            textButton: "Ver detalle"
+                        }
+                    )
+                    )} />
+                </div>
+
             </container>
 
         </>

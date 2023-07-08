@@ -1,16 +1,16 @@
-import { Servicios } from '../../tmp/data'
+import { servicios } from '../../tmp/data'
 
 
-const getItems = async (catId) => {
+const getItems = async (id) => {
 
     return new Promise ((resolve, reject) => {
-        resolve(Servicios.filter((Servicio) => Servicio.categoriaId === catId));
+        resolve(servicios.filter((Servicio) => Servicio.categoriaId === id));
     });
 };
 
 const getItem = async (id) => {
     return new Promise ((resolve, reject) => {
-        resolve(Servicios.find((Servicio) => Servicio.id == id));
+        resolve(servicios.find((Servicio) => Servicio.id == id));
     });
 }
 

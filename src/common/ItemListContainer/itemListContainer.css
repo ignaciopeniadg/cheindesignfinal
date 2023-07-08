@@ -33,6 +33,7 @@
 
 .itemlist {
     width: 93rem;
+    height: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,7 +43,7 @@
     position: fixed;
     left: 50%;
     transform: translate(-50%);
-    top: 13rem;
+    top: 20rem;
     align-items: center;
     justify-content: center;
     border-radius: 4rem;

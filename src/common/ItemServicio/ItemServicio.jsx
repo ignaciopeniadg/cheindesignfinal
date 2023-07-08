@@ -7,6 +7,7 @@ const ItemServicio = ({ id, nombre, categoria, descripcion, precio }) => {
             <h3 className= 'card__servicio-categoria'>{categoria}</h3>
             <p className='card__servicio-descripcion'>{descripcion}</p>
             <h4 className='card__servicio-descripcion'>{precio} USD</h4>
+            <h5 className='card__servicio-id'>{id}</h5>
         </div>
     )
 }
