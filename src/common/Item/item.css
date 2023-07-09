@@ -1,4 +1,4 @@
-.detail__card {
+.item__card {
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -7,7 +7,7 @@
     text-align: center;
 }
 
-#detail__nombre-servicio {
+#item__nombre-servicio {
     padding: 2rem 0.5rem;
     border-radius: 0 0 2rem 2rem;
     background-color: var(--color-bg);
@@ -15,14 +15,14 @@
     font-weight: 300;
 }
 
-#detail__precio-servicio {
+#item__precio-servicio {
     margin-top: 1rem;
     font-size: 1.8rem;
     color: var(--color-primary-variant);
     font-weight: 500;
 }
 
-.detail__descripcion-servicio {
+.item__descripcion-servicio {
     font-weight: 300;
     font-size: 1.5rem;
     margin: 2rem 5rem;

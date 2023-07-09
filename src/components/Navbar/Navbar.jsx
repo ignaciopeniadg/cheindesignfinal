@@ -26,6 +26,7 @@ const Navbar = () => {
         <li><NavLink to='/portfolio'><GoBook /></NavLink></li>
         <li><NavLink to='/servicios'><AiOutlineShoppingCart /></NavLink></li>
         <li><NavLink to='/contacto'><AiOutlineMail /></NavLink></li>
+        <li><NavLink to='/carrito'><AiOutlineShoppingCart /></NavLink></li>
       </ul>
     </nav>
   )

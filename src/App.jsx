@@ -11,21 +11,17 @@ import { Servicios } from './pages/Servicios/Servicios'
 import { Contacto } from './pages/Contacto/Contacto'
 import { HeaderSocials } from './components/HeaderSocials/HeaderSocials'
 import { Form } from 'react-router-dom'
-import { ItemListContainer } from './common/ItemListContainer/ItemListContainer'
-import { ItemDetailContainer } from './pages'
 import WOW from 'wowjs';
+import ItemListContainer from './common/ItemListContainer/ItemListContainer'
+import ItemDetailContainer from './common/ItemDetailContainer/ItemDetailContainer'
+import Carrito from './common/Carrito/CarritoContainer/Carrito'
+import CartProvider from './context/CartContex'
 
-
-class App extends React.Component {
-    componentDidMount() {
-        new WOW.WOW({
-            live: false
-        }).init();
-    }
-    render() {
+function App() {
         return (
             <>
                 <BrowserRouter>
+                    <CartProvider>
                     <Navbar />
                     <Routes>
                         <Route path='/' element={<Home />} />
@@ -35,22 +31,20 @@ class App extends React.Component {
                         <Route path='/skills' element={<Skills />} />
                         <Route path='/portfolio' element={<Portfolio />} />
                         <Route path='/servicios' element={<Servicios />} />
-
-                        <Route path='/' element={<ItemListContainer />} />
-                        <Route path='/categoria/:id' element={<ItemListContainer />} />
-
-                        <Route path='/detalle/:id' element={<ItemDetailContainer />} />
-                        <Route path='/' element={<ItemDetailContainer />} />
-
                         <Route path='/contacto' element={<Contacto />} />
+
+                        <Route path='/carrito' element={<Carrito />} />
+
+                        <Route path='/categoria/:categoriaId' element={<ItemListContainer />} />
+                        <Route path='/' element={<ItemListContainer />} />
+
+                        <Route path='/categoria/detalleId' element={<ItemDetailContainer />} />
                     </Routes>
+                    </CartProvider>
                 </BrowserRouter>
                 <HeaderSocials />
             </>
 
         )
     }
-}
-
-
 export default App
